@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Temperature Conversion</title>
+</head>
+<body>
+    <header>
+        <h1>Temperature Conversion</h1>
+    </header>
+
+    <!--content-->
+    <section class="inputsection">
+        <h3>Enter the temperature degrees in the box below, then click the <em>Conversion</em> button to get the conversion results.</h3>
+        <label id="inputSectionLabel" for="inputfield">Celsius (°C)</label>
+        <input type="number" name="inputfield" id="inputfield"/>
+
+        <div class="inputbuttonsection">
+        <button onclick="convert()">Conversion</button>
+        <button onclick="reset()">Reset</button>
+        <button onclick="reverse()">Reverse</button>
+        </div>
+    </section>
+
+    <section class="outputsection">
+        <label id="outputSectionLabel" for="outputfield" class="label">Fahrenheit (°F)</label>
+        <input type="number" name="outputfield" id="outputfield" readonly/>
+    
+        <label for="calculationfield" class="label" >Calculation Step</label>
+        <input name="calculationfield" id="calculationfield" readonly/>
+    </section>
+
+    <div>
+        <section id="explanationSection1">
+            <h4>How to Convert from <label id="explanationInput">Celsius (°C)</label> to <label id="explanationOutput">Fahrenheit (°F)</label></h4>
+            <p><i>S</i> in degrees <label id="explanationOutput2">Fahrenheit (°F)</label> equals <i>S</i> in degrees <label id="explanationCelsius">Celsius (°C)</label> <label id="celsiusFormula">times 9/5 plus 32</label>
+            <br>
+            <br>
+                <label id="SF1"><em>S</em><sub>(°F)</sub> = (<em>S</em><sub>(°C)</sub> × 9/5) + 32</label>
+                <br>
+                or
+                <br>
+                <label id="SF2"><em>S</em><sub>(°F)</sub> = (<em>S</em><sub>(°C)</sub> × 1.8) + 32</label>
+            </p>
+        </section>
+    
+        <section id="explanationSection2">
+            <h4>How to Convert from <label id="explanationInput">Fahrenheit (°F)</label> to <label id="explanationOutput">Celsius (°C)</label></h4>
+            <p><i>S</i> in degrees <label id="explanationOutput2">Celsius (°C)</label> equals <i>S</i> in degrees <label id="explanationCelsius">Fahrenheit (°F)</label> <label id="fahrenheitFormula">minus 32 times 5/9</label>
+            <br>
+            <br>
+                <label id="SC1"><em>S</em><sub>(°C)</sub> = (<em>S</em><sub>(°F)</sub> - 32) * 5/9</label>
+                <br>
+                or
+                <br>
+                <label id="SC2"><em>S</em><sub>(°C)</sub> = (<em>S</em><sub>(°F)</sub> - 32) * 0,56</label>
+            </p>
+        </section>
+    </div>
+
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
